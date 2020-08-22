@@ -13,26 +13,23 @@
 <body>
     <section class="promo">
             <header class="header">
-                <div class="header__logo">
+                <div class="header__logo header__logo_active">
                     <img src="icon/logotest1.png" alt="Логотип">
                 </div>
-                <nav>
-                    <div class="container">
-                        <ul class="menu">
-                            <li class="menu__item"><a href="#" class="menu__link">Обо мне</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">Работы</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">Услуги</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
-                            <li class="menu__item"><a href="tel:+40761419737" class="menu__link menu__link_num">+40 761 419 737</a></li>
-                        </ul>
-                    </div>
-                    <div class="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+                <nav id="myLinks">
+                    <a href="#" class="header__link">Обо мне</a>
+                    <a href="#" class="header__link">Работы</a>
+                    <a href="#" class="header__link">Услуги</a>
+                    <a href="#" class="header__link">Отзывы</a>
+                    <a href="#" class="header__link">Контакты</a>
+                    <a href="tel:+40761419737" class="header__link_mob">+40 761 419 737</a>
                 </nav>
+                <a href="tel:+40761419737" class="menu__link header__link_xl">+40 761 419 737</a>
+                <a href="javascript:void(0);" class="hamburger" onclick="myFunction()">
+                    <span class="hamburger__span"></span>
+                    <span class="hamburger__span"></span>
+                    <span class="hamburger__span"></span>
+                </a>
             </header>
             <div class="container"></div>
             <h2 class="promo__name">Богдана Микитюк</h2>
