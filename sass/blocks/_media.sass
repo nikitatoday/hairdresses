@@ -4,7 +4,12 @@
 		
 @media (max-width: 991px)
     .header
-        display: block
+        &__sub
+            position: fixed
+            display: block
+            background-color: #000000
+            position: fixed
+            z-index: 3
         &__logo
             margin-left: 20px
         &__navicon
@@ -100,6 +105,9 @@
         &__title
             font-size: 31px
             margin-bottom: 50px
+        &__descr
+            padding: 0 5px
+            font-size: 16px
 
     .about
         &__subcontent_first
@@ -113,12 +121,19 @@
         &__icon
             margin-right: 0
             float: none
+        &__submintitle
+            margin: 10px 0
     .services
         &__descr
             padding: 10px
         &__table
             width: 310px
-    
+    .feedback
+        height: 500px
+        &__wrapper
+            margin-top: 55px
+
+        
     .contact
         &__form
             width: 280px
