@@ -28,3 +28,31 @@ $(document).ready(function(){
   });
 
 });
+
+$('form').submit(function(e) {
+	e.preventDefault();
+	$.ajax({
+		type: "POST",
+		url: "form/telegram.php",
+		data: $(this).serialize()
+	}).done(function() {
+		$(this).find("input").val("");
+		$('#consultation').fadeOut();
+		$('.overlay, #thanks').fadeIn('slow');
+
+		$('form').trigger('reset');
+	});
+	return false;
+});
+
+
+//MODAL
+
+$('[data-modal=consultation]').on('click', function() {
+	$('.overlay, #consultation').fadeIn('slow');
+});
+$('.modal__close').on('click', function() {
+	$('.overlay, #consultation, #thanks').fadeOut('slow');
+});
+
+//MODAL

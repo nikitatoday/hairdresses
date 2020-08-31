@@ -26,20 +26,18 @@
                     <a href="#" class="header__link">Отзывы</a>
                     <a href="#" class="header__link">Контакты</a>
                     </nav>
-                    <div class="header__phone">+7 (999) 999-99-99</div>
+                    <div class="header__phone"><a href="tel:+40761419737">+40 761 419 737</a></div>
                 </div>
             </div>
         </div>
     </header>
     
     <section class="promo">
-            
             <div class="container"></div>
             <h2 class="promo__name">Богдана Микитюк</h2>
             <h1 class="promo__title">Парикмахер-стилист</h1>
             <h3 class="promo__descr">Красота. Индивидуальность. Практичность.</h3>
-            <button class="promo__btn btn animated bounceInUp">ЗАПИСАТЬСЯ</button>
-        </div>
+            <button data-modal="consultation" class="promo__btn btn animated bounceInUp">ЗАПИСАТЬСЯ</button>
     </section>
     <section class="about">
         <div class="container">
@@ -184,7 +182,7 @@
                 </div>
              </div>
             
-            <button class="services__btn btn">INSCRIE-TE</button>
+            <button data-modal="consultation" class="services__btn btn">INSCRIE-TE</button>
         </div>
         
     </section>
@@ -240,14 +238,14 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2687.9491194002326!2d26.24930392562379!3d47.64655556802507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4734fc2f24b1cbbb%3A0xd382ecaa3dd30668!2zQmxvYyBBMTIsIFN0cmFkYSBNxINyxIPImWXImXRpIDM5QSwgU3VjZWF2YSA3MjAxNzksINCg0YPQvNGL0L3QuNGP!5e0!3m2!1sru!2sua!4v1598034245006!5m2!1sru!2sua" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
                 <div class="contact__form">
-                    <form>
+                    <form class="form" action="form/telegram.php" method="POST">
                         <div class="contact__form-group">
-                          <input type="text" class="contact__form-control" id="exampleFormControlInput1" placeholder="Ваше Имя:">
-                          <input type="email" class="contact__form-control" id="exampleFormControlInput2" placeholder="Ваш email:">
+                          <input name="name" type="text" class="contact__form-control" id="exampleFormControlInput1" placeholder="Ваше Имя:">
+                          <input name="phone" type="text" class="contact__form-control" id="exampleFormControlInput2" placeholder="Ваш Номер:">
                         </div>
                         <div class="contact__form-group">
-                          <select class="contact__form-control" id="exampleFormControlSelect1">
-                            <option value="Стрижка">Selectați serviciul</option>
+                          <select name="services" class="contact__form-control" id="exampleFormControlSelect1">
+                            <option value="serviciul">Selectați serviciul</option>
                             <option value="Стрижка">O tunsoare</option>
                             <option value="Окрашивание">Colorarea părului</option>
                             <option value="Карвинг">Sculptură</option>
@@ -262,6 +260,7 @@
                     <div class="contact__subdescr">
                         Făcând clic pe buton, consimțiți la procesarea datelor dvs.
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -293,6 +292,37 @@
             <a href="tel:+40761419737">+40 761 419 737</a>
         </div>
     </footer>
+    <div class="overlay">
+        <div class="modal" id="consultation">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Просто заполните форму заявки</div>
+            <div class="modal__descr">и мы перезвоним вам в течении 10-60 минут</div>
+            <form class="form" action="form/telegram.php" method="POST">
+                <div class="contact__form-group">
+                  <input name="name" type="text" class="contact__form-control" id="exampleFormControlInput1" placeholder="Ваше Имя:">
+                  <input name="phone" type="text" class="contact__form-control" id="exampleFormControlInput2" placeholder="Ваш Номер:">
+                </div>
+                <div class="contact__form-group">
+                  <select name="services" class="contact__form-control" id="exampleFormControlSelect1">
+                    <option value="serviciul">Selectați serviciul</option>
+                    <option value="Стрижка">O tunsoare</option>
+                    <option value="Окрашивание">Colorarea părului</option>
+                    <option value="Карвинг">Sculptură</option>
+                    <option value="Мелирование">Evidențiere</option>
+                    <option value="Укладка">Coafură</option>
+                    <option value="Экранирование волос">Protecția părului</option>
+                    <option value="Экспресс-восстановление">Recuperare expresă</option>
+                  </select>
+                </div>
+                <button type="submit" class="modal__btn contact__btn btn">INSCRIE-TE</button>
+            </form>
+        </div>
+        <div class="modal modal__mini" id="thanks">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Спасибо за вашу заявку!</div>
+            <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
+        </div>
+    </div>
 
 
 
